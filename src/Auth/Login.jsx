@@ -38,23 +38,26 @@ const Login = () => {
                 Password
               </label>
               <input
-                id="name"
+                id="password"
                 type="text"
                 className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
-                placeholder="name@compagny.com"
+                placeholder="*********"
               />
             </div>
-            <button className="bg-[#007DFE] w-[22rem] text-sm mt-8 shadow-sm rounded-lg py-2 text-white">
-              Signup
+            <p className="w-[22rem] text-right mt-4 text-xs font-medium cursor-pointer">
+              forgot Password
+            </p>
+            <button className="bg-[#007DFE] font-semibold w-[22rem] text-sm mt-4 shadow-sm rounded-lg py-3 text-white">
+              Sign up
             </button>
-            <button className=" border-[#D7D7D7] text-sm flex items-center justify-center w-[22rem] mt-4 shadow-sm rounded-lg py-2 text-[2B2B2B]">
+            <button className=" border-[#D7D7D7] border text-sm flex items-center justify-center w-[22rem] mt-4 shadow-sm rounded-lg py-2 text-[2B2B2B]">
               <img src={google} alt="" />{" "}
               <p className="ml-2">Log in with Google</p>
             </button>
             <p className="w-[22rem] text-xs justify-center mt-4 flex">
               <p>Don’t have an account ?</p>
               <p
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/signup")}
                 className="text-[#2B2B2B] font-semibold ml-2 cursor-pointer "
               >
                 Sign up here
@@ -63,7 +66,7 @@ const Login = () => {
           </form>
         </div>
         <div className="dd 3xl:bg-rose-200 flex items-center  justify-center h-full">
-          <img src={loginimg} alt="" className="object-contain w-[38rem]" />
+          <img src={loginimg} alt="" className="object-contain w-[32rem]" />
         </div>
       </div>
     </div>
