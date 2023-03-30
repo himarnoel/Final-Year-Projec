@@ -63,7 +63,7 @@ const Signup = () => {
             <p className="w-[22rem] text-xs justify-center mt-4 flex">
               <p>Already have an account ?</p>
               <p
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/login")}
                 className="text-[#2B2B2B] font-semibold ml-2 cursor-pointer"
               >
                 Login here
