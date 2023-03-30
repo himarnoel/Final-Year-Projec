@@ -54,7 +54,7 @@ const Signup = () => {
                 id="password"
                 type="text"
                 className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
-                placeholder="*********"
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               />
             </div>
             <button className="bg-[#007DFE] w-[22rem] mt-10 rounded-lg py-2 text-white">
