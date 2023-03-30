@@ -1,6 +1,8 @@
 import React from "react";
 import signupimg from "../assets/signup.svg";
+import { useNavigate } from "react-router-dom";
 const Signup = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
@@ -60,7 +62,12 @@ const Signup = () => {
             </button>
             <p className="w-[22rem] text-xs justify-center mt-4 flex">
               <p>Already have an account ?</p>
-              <p className="text-[#2B2B2B] font-semibold ml-2 ">Login here</p>
+              <p
+                onClick={() => navigate("/")}
+                className="text-[#2B2B2B] font-semibold ml-2 "
+              >
+                Login here
+              </p>
             </p>
           </form>
         </div>

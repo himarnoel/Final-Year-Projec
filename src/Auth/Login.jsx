@@ -1,6 +1,10 @@
 import React from "react";
 import loginimg from "../assets/login.png";
+import google from "../assets/google.svg";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
@@ -40,12 +44,21 @@ const Login = () => {
                 placeholder="name@compagny.com"
               />
             </div>
-            <button className="bg-[#007DFE] w-[22rem] mt-8 shadow-sm rounded-lg py-2 text-white">
+            <button className="bg-[#007DFE] w-[22rem] text-sm mt-8 shadow-sm rounded-lg py-2 text-white">
               Signup
             </button>
+            <button className=" border-[#D7D7D7] text-sm flex items-center justify-center w-[22rem] mt-4 shadow-sm rounded-lg py-2 text-[2B2B2B]">
+              <img src={google} alt="" />{" "}
+              <p className="ml-2">Log in with Google</p>
+            </button>
             <p className="w-[22rem] text-xs justify-center mt-4 flex">
-              <p>Already have an account ?</p>
-              <p className="text-[#2B2B2B] font-semibold ml-2 ">Login here</p>
+              <p>Don’t have an account ?</p>
+              <p
+                onClick={() => navigate("/")}
+                className="text-[#2B2B2B] font-semibold ml-2 "
+              >
+                Sign up here
+              </p>
             </p>
           </form>
         </div>
