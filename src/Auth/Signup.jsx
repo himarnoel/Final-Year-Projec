@@ -58,14 +58,14 @@ const Signup = () => {
             <button className="bg-[#007DFE] w-[22rem] mt-10 rounded-lg py-2 text-white">
               Signup
             </button>
-            <p className="w-[22rem] text-xs mt-8 flex">
+            <p className="w-[22rem] text-xs justify-center mt-4 flex">
               <p>Already have an account ?</p>
-              <p className="text-[#2B2B2B] font-semibold">Login here</p>
+              <p className="text-[#2B2B2B] font-semibold ml-2 ">Login here</p>
             </p>
           </form>
         </div>
         <div className="dd 3xl:bg-rose-200 flex items-center  justify-center h-full">
-          <img src={signupimg} alt="" className="object-contain w-[35rem]" />
+          <img src={signupimg} alt="" className="object-contain w-[38rem]" />
         </div>
       </div>
     </div>
