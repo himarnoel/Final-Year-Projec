@@ -55,7 +55,7 @@ const Login = () => {
               <p>Don’t have an account ?</p>
               <p
                 onClick={() => navigate("/")}
-                className="text-[#2B2B2B] font-semibold ml-2 "
+                className="text-[#2B2B2B] font-semibold ml-2 cursor-pointer "
               >
                 Sign up here
               </p>
