@@ -13,6 +13,7 @@ const Signup = () => {
           <p className="text-[#2B2B2B80] text-sm mt-4">
             Please enter your contact details to connect.
           </p>
+          <img src="" alt="" />
           <form action="" method="get">
             <div className="mt-4">
               <label
@@ -24,7 +25,7 @@ const Signup = () => {
               <input
                 id="name"
                 type="text"
-                className="mt-1 focus:outline-none  rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline"
+                className="mt-1 focus:outline-none  rounded-lg border focus:border-[#007DFE] border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline"
                 placeholder="John Doe"
               />
             </div>
@@ -39,7 +40,7 @@ const Signup = () => {
               <input
                 id="name"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="name@compagny.com"
               />
             </div>
@@ -53,7 +54,7 @@ const Signup = () => {
               <input
                 id="password"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               />
             </div>

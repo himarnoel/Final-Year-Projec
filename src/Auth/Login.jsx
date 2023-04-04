@@ -26,7 +26,7 @@ const Login = () => {
               <input
                 id="name"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="name@compagny.com"
               />
             </div>
@@ -40,11 +40,11 @@ const Login = () => {
               <input
                 id="password"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                className="mt-1 focus:outline-none focus:border-[#007DFE] rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               />
             </div>
-            <p className="w-[22rem] text-right mt-4 text-xs font-medium cursor-pointer">
+            <p className="w-[22rem] text-right mt-4 text-xs font-medium cursor-pointer text-[#007DFE]">
               forgot Password
             </p>
             <button className="bg-[#007DFE] font-semibold w-[22rem] text-sm mt-4 shadow-sm rounded-lg py-3 text-white">
