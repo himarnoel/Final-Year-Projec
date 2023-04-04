@@ -20,9 +20,7 @@ const Home = () => {
           className="absolute z-[-1] right-0 w-[41.3rem] object-contain"
         />
       </div>
-      <div className="w-full px-20">
-        
-      </div>
+      <div className="w-full px-20"></div>
     </div>
   );
 };
