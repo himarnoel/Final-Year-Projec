@@ -1,18 +1,27 @@
 import React from "react";
 import logo from "../assets/Logo.png";
 import bg from "../assets/bg.png";
-import apps from "../assets/apps.png";
+import apps from "../assets/bgapps.png";
 const Home = () => {
   return (
-    <div>
+    <div className="font-raleway">
       <div className=" flex justify-between py-4 px-20 shadow-md">
-        <img src={logo} alt="" className="object-contain w-[9rem]" />
-        <div className="w-[18rem] flex items-center justify-between"></div>
+        <img src={logo} alt="" className="object-contain w-[8rem]" />
+        <div className=""></div>
       </div>
       <div className="relative ">
         {" "}
         <img src={bg} className="absolute" />
-        <img src={apps} className="absolute right-0 w-[20rem] object-contain" />
+        <p className="absolute text-white left-20 inset-16 font-semibold text-2xl ">
+          Verify your favourite apps with confidence.
+        </p>
+        <img
+          src={apps}
+          className="absolute z-[-1] right-0 w-[41.3rem] object-contain"
+        />
+      </div>
+      <div className="w-full px-20">
+        
       </div>
     </div>
   );
