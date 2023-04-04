@@ -7,6 +7,7 @@ import Login from "./Auth/Login";
 import Signup from "./Auth/Signup";
 import Search from "./App/Search";
 import Detail from "./App/Detail";
+import Home from "./App/Home";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/search" element={<Search />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/home" element={<Detail />} />
+        <Route path="/home" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
