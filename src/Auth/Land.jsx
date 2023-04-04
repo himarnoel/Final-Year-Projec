@@ -32,7 +32,7 @@ const Land = () => {
             Android and iOS Apps
           </p>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="py-4 px-24 text-white bg-[#007DFE] mt-4"
           >
             Check Apps
