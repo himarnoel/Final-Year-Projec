@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
+
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
@@ -47,8 +48,11 @@ const Login = () => {
             <p className="w-[22rem] text-right mt-4 text-xs font-medium cursor-pointer text-[#007DFE]">
               forgot Password
             </p>
-            <button className="bg-[#007DFE] font-semibold w-[22rem] text-sm mt-4 shadow-sm rounded-lg py-3 text-white">
-              Sign up
+            <button
+              onClick={() => navigate("/home")}
+              className="bg-[#007DFE] font-semibold w-[22rem] text-sm mt-4 shadow-sm rounded-lg py-3 text-white"
+            >
+           Login
             </button>
             <button className=" border-[#D7D7D7] border text-sm flex items-center justify-center w-[22rem] mt-4 shadow-sm rounded-lg py-2 text-[2B2B2B]">
               <img src={google} alt="" />{" "}

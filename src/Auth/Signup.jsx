@@ -1,8 +1,18 @@
 import React from "react";
 import signupimg from "../assets/signup.svg";
 import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import { loginValidate } from "../Service/validate";
 const Signup = () => {
   const navigate = useNavigate();
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: loginValidate,
+    onSubmit: (values) => {},
+  });
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
