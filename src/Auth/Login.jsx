@@ -24,7 +24,7 @@ const Login = () => {
           <p className="text-[#2B2B2B80] text-sm mt-4">
             Please enter your contact details to connect.
           </p>
-          <form action="" method="get">
+          <form onSubmit={formik.handleSubmit}>
             <div className="mt-8">
               <label
                 htmlFor=""
