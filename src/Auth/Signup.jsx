@@ -2,7 +2,7 @@ import React from "react";
 import signupimg from "../assets/signup.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import { loginValidate } from "../Service/validate";
+import { loginValidate, signupValidate } from "../Service/validate";
 const Signup = () => {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -11,7 +11,7 @@ const Signup = () => {
       email: "",
       password: "",
     },
-    validationSchema: loginValidate,
+    validationSchema: signupValidate,
     onSubmit: (values) => {},
   });
   return (
@@ -25,7 +25,7 @@ const Signup = () => {
             Please enter your contact details to connect.
           </p>
           <img src="" alt="" />
-          <form action="" method="get">
+          <form onSubmit={formik.handleSubmit} method="get">
             <div className="mt-4">
               <label
                 htmlFor=""
