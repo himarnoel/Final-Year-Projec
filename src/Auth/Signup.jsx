@@ -36,12 +36,23 @@ const Signup = () => {
               <input
                 id="name"
                 type="text"
-                className="mt-1 focus:outline-none  rounded-lg border focus:border-[#007DFE] border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline"
+                className={
+                  formik.errors.name && formik.touched.name
+                    ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                    : "mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                }
                 placeholder="John Doe"
                 onChange={formik.handleChange}
                 value={formik.values.name}
                 onBlur={formik.handleBlur}
               />
+              {formik.errors.name && formik.touched.name ? (
+                <p className="text-red-500 text-xs font-poppins mt-1">
+                  {formik.errors.name}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className="mt-8">
@@ -82,12 +93,23 @@ const Signup = () => {
               <input
                 id="password"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                className={
+                  formik.errors.password && formik.touched.password
+                    ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                    : "mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                }
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
                 onChange={formik.handleChange}
                 value={formik.values.password}
                 onBlur={formik.handleBlur}
               />
+              {formik.errors.password && formik.touched.password ? (
+                <p className="text-red-500 text-xs font-poppins mt-1">
+                  {formik.errors.password}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <button className="bg-[#007DFE] w-[22rem] mt-10 rounded-lg py-2 text-white">
               Signup
