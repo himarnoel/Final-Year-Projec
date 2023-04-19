@@ -17,6 +17,14 @@ const Signup = () => {
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
+        {load ? (
+          <div className="absolute bg-cover bg-[#262626]/[0.8]  z-[20] h-screen w-screen flex  justify-center items-center text-3xl">
+            <RingLoader color="#007DFE" size={90} />
+          </div>
+        ) : (
+          ""
+        )}
+
         <div className="dd 3xl:bg-blue-100 flex h-full justify-center flex-col items-center ">
           <h1 className="text-[#2B2B2B] text-5xl font-semibold w-[22rem] text-center">
             Welcome Here
