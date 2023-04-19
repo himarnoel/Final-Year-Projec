@@ -52,14 +52,25 @@ const Signup = () => {
                 Email address
               </label>
               <input
-                id="name"
+                id="email"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
-                placeholder="name@compagny.com"
+                className={
+                  formik.errors.email && formik.touched.email
+                    ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                    : "mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                }
+                placeholder="name@company.com"
                 onChange={formik.handleChange}
                 value={formik.values.email}
                 onBlur={formik.handleBlur}
               />
+              {formik.errors.email && formik.touched.email ? (
+                <p className="text-red-500 text-xs font-poppins mt-1">
+                  {formik.errors.email}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="mt-8">
               <label

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import loginimg from "../assets/login.png";
 import google from "../assets/google.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginValidate } from "../Service/validate";
+import RingLoader from "react-spinners/RingLoader";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,9 +21,9 @@ const Login = () => {
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
-        {!load ? (
+        {load ? (
           <div className="absolute bg-cover bg-[#262626]/[0.8]  z-[20] h-screen w-screen flex  justify-center items-center text-3xl">
-            <RingLoader color="#009186" size={90} />
+            <RingLoader color="#007DFE" size={90} />
           </div>
         ) : (
           ""
