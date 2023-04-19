@@ -7,7 +7,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
-      name:"",
+      name: "",
       email: "",
       password: "",
     },
@@ -40,7 +40,7 @@ const Signup = () => {
                 placeholder="John Doe"
                 onChange={formik.handleChange}
                 value={formik.values.name}
-                onBlur={formik.handleBlur} 
+                onBlur={formik.handleBlur}
               />
             </div>
 
@@ -56,6 +56,9 @@ const Signup = () => {
                 type="text"
                 className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="name@compagny.com"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+                onBlur={formik.handleBlur}
               />
             </div>
             <div className="mt-8">
@@ -70,6 +73,9 @@ const Signup = () => {
                 type="text"
                 className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                onBlur={formik.handleBlur}
               />
             </div>
             <button className="bg-[#007DFE] w-[22rem] mt-10 rounded-lg py-2 text-white">
