@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import signupimg from "../assets/signup.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginValidate, signupValidate } from "../Service/validate";
+import RingLoader from "react-spinners/RingLoader";
 const Signup = () => {
   const navigate = useNavigate();
+  const [load, setload] = useState(false);
   const formik = useFormik({
     initialValues: {
       name: "",
