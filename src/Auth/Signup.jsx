@@ -25,7 +25,7 @@ const Signup = () => {
             Please enter your contact details to connect.
           </p>
           <img src="" alt="" />
-          <form onSubmit={formik.handleSubmit} method="get">
+          <form onSubmit={formik.handleSubmit}>
             <div className="mt-4">
               <label
                 htmlFor=""

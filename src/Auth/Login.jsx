@@ -63,7 +63,7 @@ const Login = () => {
               forgot Password
             </p>
             <button
-              onClick={() => navigate("/home")}
+              // onClick={() => navigate("/home")}
               className="bg-[#007DFE] font-semibold w-[22rem] text-sm mt-4 shadow-sm rounded-lg py-3 text-white"
             >
               Login
