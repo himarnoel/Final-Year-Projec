@@ -7,6 +7,7 @@ import { loginValidate } from "../Service/validate";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [load, setload] = useState(false);
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -15,9 +16,17 @@ const Login = () => {
     validationSchema: loginValidate,
     onSubmit: (values) => {},
   });
+  console.log(formik.errors);
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
+        {!load ? (
+          <div className="absolute bg-cover bg-[#262626]/[0.8]  z-[20] h-screen w-screen flex  justify-center items-center text-3xl">
+            <RingLoader color="#009186" size={90} />
+          </div>
+        ) : (
+          ""
+        )}
         <div className="dd 3xl:bg-blue-100 flex h-full justify-center flex-col items-center ">
           <h1 className="text-[#2B2B2B] text-5xl font-semibold w-[22rem] text-center">
             Welcome Back
@@ -34,14 +43,25 @@ const Login = () => {
                 Email address
               </label>
               <input
-                id="name"
+                id="email"
                 type="text"
-                className="mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
-                placeholder="name@compagny.com"
+                className={
+                  formik.errors.email && formik.touched.email
+                    ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                    : "mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                }
+                placeholder="name@company.com"
                 onChange={formik.handleChange}
                 value={formik.values.email}
                 onBlur={formik.handleBlur}
               />
+              {formik.errors.email && formik.touched.email ? (
+                <p className="text-red-500 text-xs font-poppins mt-1">
+                  {formik.errors.email}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="mt-4">
               <label
@@ -53,12 +73,23 @@ const Login = () => {
               <input
                 id="password"
                 type="text"
-                className="mt-1 focus:outline-none focus:border-[#007DFE] rounded-lg border border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
-                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                className={
+                  formik.errors.password && formik.touched.password
+                    ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                    : "mt-1 focus:outline-none rounded-lg border focus:border-[#007DFE]  border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
+                }
                 onChange={formik.handleChange}
                 value={formik.values.password}
                 onBlur={formik.handleBlur}
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
               />
+              {formik.errors.password && formik.touched.password ? (
+                <p className="text-red-500 text-xs font-poppins mt-1">
+                  {formik.errors.password}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <p className="w-[22rem] text-right mt-4 text-xs font-medium cursor-pointer text-[#007DFE]">
               forgot Password
