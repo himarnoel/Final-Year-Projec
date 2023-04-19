@@ -3,6 +3,7 @@ import loginimg from "../assets/login.png";
 import google from "../assets/google.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
+import { loginValidate } from "../Service/validate";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Login = () => {
       email: "",
       password: "",
     },
-    validationSchema: signupValidate,
+    validationSchema: loginValidate,
     onSubmit: (values) => {},
   });
   return (
