@@ -7,6 +7,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
+      name:"",
       email: "",
       password: "",
     },
@@ -37,6 +38,9 @@ const Signup = () => {
                 type="text"
                 className="mt-1 focus:outline-none  rounded-lg border focus:border-[#007DFE] border-[#D7D7D7] text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline"
                 placeholder="John Doe"
+                onChange={formik.handleChange}
+                value={formik.values.name}
+                onBlur={formik.handleBlur} 
               />
             </div>
 
