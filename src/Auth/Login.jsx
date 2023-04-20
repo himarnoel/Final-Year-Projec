@@ -23,12 +23,12 @@ const Login = () => {
         .then((res) => {
           setload(false);
           console.log(res);
-          navigate("/login");
+          navigate("/home");
         })
         .catch((e) => {
           setload(false);
           console.log(e);
-          navigate("/login");
+          navigate("/home");
         });
     },
   });
