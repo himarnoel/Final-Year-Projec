@@ -16,6 +16,7 @@ const Signup = () => {
     },
     validationSchema: signupValidate,
     onSubmit: (values) => {
+      console.log(values);
       setload(true);
       axios
         .post(`${baseurl}/register`, values)
@@ -31,6 +32,7 @@ const Signup = () => {
         });
     },
   });
+  console.log(formik.values);
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">

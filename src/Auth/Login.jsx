@@ -17,6 +17,7 @@ const Login = () => {
     },
     validationSchema: loginValidate,
     onSubmit: (values) => {
+      console.log(values);
       setload(true);
       axios
         .post(`${baseurl}/login`, values)
