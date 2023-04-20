@@ -1,5 +1,5 @@
 import * as yup from "yup";
-
+export const baseurl = "https://gigamoni-backend.onrender.com/api/v1";
 export const loginValidate = yup.object().shape({
   email: yup
     .string()

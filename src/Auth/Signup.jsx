@@ -27,7 +27,7 @@ const Signup = () => {
           ""
         )}
 
-        <div className="dd 3xl:bg-blue-100 flex h-full justify-center flex-col items-center ">
+        <div className=" 3xl:bg-blue-100 flex h-full justify-center flex-col items-center ">
           <h1 className="text-[#2B2B2B] text-5xl font-semibold w-[22rem] text-center">
             Welcome Here
           </h1>
@@ -74,7 +74,7 @@ const Signup = () => {
               </label>
               <input
                 id="email"
-                type="text"
+                type="email"
                 className={
                   formik.errors.email && formik.touched.email
                     ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
@@ -102,7 +102,7 @@ const Signup = () => {
               </label>
               <input
                 id="password"
-                type="text"
+                type="password"
                 className={
                   formik.errors.password && formik.touched.password
                     ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"

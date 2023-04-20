@@ -3,8 +3,9 @@ import loginimg from "../assets/login.png";
 import google from "../assets/google.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import { loginValidate } from "../Service/validate";
+import { baseurl, loginValidate } from "../Service/validate";
 import RingLoader from "react-spinners/RingLoader";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +16,16 @@ const Login = () => {
       password: "",
     },
     validationSchema: loginValidate,
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      axios
+        .post(`${baseurl}/gadmin/completed/`, values)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
   });
   console.log(formik.errors);
   return (
@@ -45,7 +55,7 @@ const Login = () => {
               </label>
               <input
                 id="email"
-                type="text"
+                type="email"
                 className={
                   formik.errors.email && formik.touched.email
                     ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
@@ -73,7 +83,7 @@ const Login = () => {
               </label>
               <input
                 id="password"
-                type="text"
+                type="password"
                 className={
                   formik.errors.password && formik.touched.password
                     ? "mt-1 focus:outline-none rounded-lg border  border-red-500 text-xs py-3 w-[22rem] px-2 placeholder:text-xs leading-tight focus:shadow-outline shadow-sm"
