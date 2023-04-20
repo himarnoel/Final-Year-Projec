@@ -17,13 +17,18 @@ const Login = () => {
     },
     validationSchema: loginValidate,
     onSubmit: (values) => {
+      setload(true);
       axios
         .post(`${baseurl}/gadmin/completed/`, values)
         .then((res) => {
+          setload(false);
           console.log(res);
+          navigate("/login");
         })
         .catch((e) => {
+          setload(false);
           console.log(e);
+          navigate("/login");
         });
     },
   });

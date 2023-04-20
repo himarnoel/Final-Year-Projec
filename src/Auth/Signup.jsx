@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import signupimg from "../assets/signup.svg";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-import { loginValidate, signupValidate } from "../Service/validate";
+import { baseurl, loginValidate, signupValidate } from "../Service/validate";
 import RingLoader from "react-spinners/RingLoader";
+import axios from "axios";
 const Signup = () => {
   const navigate = useNavigate();
   const [load, setload] = useState(false);
@@ -14,7 +15,21 @@ const Signup = () => {
       password: "",
     },
     validationSchema: signupValidate,
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      setload(true);
+      axios
+        .post(`${baseurl}/gadmin/completed/`, values)
+        .then((res) => {
+          setload(false);
+          console.log(res);
+          navigate("/login")
+        })
+        .catch((e) => {
+          setload(false);
+          console.log(e);
+          navigate("/login")
+        });
+    },
   });
   return (
     <div>
