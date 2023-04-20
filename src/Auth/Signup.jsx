@@ -18,16 +18,16 @@ const Signup = () => {
     onSubmit: (values) => {
       setload(true);
       axios
-        .post(`${baseurl}/gadmin/completed/`, values)
+        .post(`${baseurl}/register`, values)
         .then((res) => {
           setload(false);
           console.log(res);
-          navigate("/login")
+          navigate("/login");
         })
         .catch((e) => {
           setload(false);
           console.log(e);
-          navigate("/login")
+          navigate("/login");
         });
     },
   });

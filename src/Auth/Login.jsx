@@ -19,7 +19,7 @@ const Login = () => {
     onSubmit: (values) => {
       setload(true);
       axios
-        .post(`${baseurl}/gadmin/completed/`, values)
+        .post(`${baseurl}/login`, values)
         .then((res) => {
           setload(false);
           console.log(res);
@@ -32,7 +32,7 @@ const Login = () => {
         });
     },
   });
-  console.log(formik.errors);
+
   return (
     <div>
       <div className="w-full h-screen bg-[#fff] font-raleway items-center gap-x-8 grid grid-cols-2">
